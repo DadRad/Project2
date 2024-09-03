@@ -1,7 +1,7 @@
 ﻿using System;
 class Program
 {
-    static void Main(string[] args)
+    static void Main()
     {
         int userCount = 100;
         double productPrice = 29.99;
