@@ -1,17 +1,23 @@
 ﻿using System;
+
 class Program
 {
-    static void Main()
+    static void Main(string[] args)
     {
-        int userCount = 100;
-        double productPrice = 29.99;
-        string productName = "C# Book";
-        bool isAvailableInStock = true;
-        char firstLetter = 'K';
-        int bossHP = 100;
-        float productRating = 4.5f;
-        long totalSales = 1500000;
-        byte userLevel = 5;
-        string userFeedback = "Отличный продукт!";
+        Console.Write("Как вас зовут?");
+        string name = Console.ReadLine();
+        Console.Write("Укажите ваш возраст:");
+        int age;
+        while (!int.TryParse(Console.ReadLine(), out age))
+        { 
+            Console.WriteLine("Введите корректный возраст!");
+        }
+        Console.Write("Укажите ваш опыт работы в нашей сфере:");
+        int workExpirience;
+        while (!int.TryParse(Console.ReadLine(), out workExpirience))
+        {
+            Console.WriteLine("Введите корректное число!");
+        }
+        Console.WriteLine($"Вас зовут {name}, ваш возраст - {age}, ваш опыт работы - {workExpirience}");
     }
 }
