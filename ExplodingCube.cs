@@ -4,8 +4,6 @@ using System.Collections;
 public class ExplodingCube : MonoBehaviour
 {
     [SerializeField] private float _explosionForce = 10f;
-    [SerializeField] private float _explosionRadius = 5f;
-    [SerializeField] private float _gravityScale = 2f;
 
     private Rigidbody _rb;
     private Renderer _cubeRenderer;
