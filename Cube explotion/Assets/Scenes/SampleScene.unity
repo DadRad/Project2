@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 146869666}
   - component: {fileID: 146869667}
   m_Layer: 0
-  m_Name: GameManager
+  m_Name: CubeHandler
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -163,10 +163,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 146869665}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e90d5d2093d6ff44876d8654c7bea20, type: 3}
+  m_Script: {fileID: 11500000, guid: 1e2b23e3364e83f4594f936f984dc514, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _explosionForce: 1
+  _cubeLayerMask:
+    serializedVersion: 2
+    m_Bits: 8
+  _mainCamera: {fileID: 963194227}
 --- !u!1 &620443585
 GameObject:
   m_ObjectHideFlags: 0
@@ -379,8 +383,7 @@ GameObject:
   - component: {fileID: 921683545}
   - component: {fileID: 921683544}
   - component: {fileID: 921683549}
-  - component: {fileID: 921683550}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -512,20 +515,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00dc505262f9c6a4789ab6239223703d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OriginalScale: {x: 0, y: 0, z: 0}
-  SplitChance: 1
---- !u!114 &921683550
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 921683543}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c62a2f1aa13a1484dbfb9ebbea9c4b93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  _originalScale: {x: 1, y: 1, z: 1}
+  _splitChance: 1
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -943,9 +934,8 @@ GameObject:
   - component: {fileID: 1767210682}
   - component: {fileID: 1767210681}
   - component: {fileID: 1767210680}
-  - component: {fileID: 1767210687}
-  - component: {fileID: 1767210688}
-  m_Layer: 0
+  - component: {fileID: 1767210685}
+  m_Layer: 3
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1065,7 +1055,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1767210687
+--- !u!114 &1767210685
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1077,20 +1067,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00dc505262f9c6a4789ab6239223703d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  OriginalScale: {x: 0, y: 0, z: 0}
-  SplitChance: 1
---- !u!114 &1767210688
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1767210679}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c62a2f1aa13a1484dbfb9ebbea9c4b93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  _originalScale: {x: 1, y: 1, z: 1}
+  _splitChance: 10
 --- !u!1 &2123607349
 GameObject:
   m_ObjectHideFlags: 0

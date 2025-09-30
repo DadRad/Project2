@@ -1,18 +1,23 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Renderer))]
 public class Cube : MonoBehaviour
 {
+    [SerializeField] private Vector3 _originalScale;
+    [SerializeField] private float _splitChance = 1f;
     private Renderer _cubeRenderer;
 
-    public Vector3 OriginalScale;
-    public float SplitChance = 1f;
+    public Vector3 OriginalScale => _originalScale;
+    public float SplitChance => _splitChance;
+
+    private void Awake()
+    {
+        _cubeRenderer = GetComponent<Renderer>();
+        _originalScale = transform.localScale;
+    }
 
     private void Start()
     {
-        _cubeRenderer = GetComponent<Renderer>();
         SetRandomColor();
     }
 
@@ -20,11 +25,14 @@ public class Cube : MonoBehaviour
     {
         if (_cubeRenderer != null)
         {
-            _cubeRenderer.material.color = new Color(
-                Random.Range(0f, 1f),
-                Random.Range(0f, 1f),
-                Random.Range(0f, 1f)
-            );
+            _cubeRenderer.material.color = Random.ColorHSV();
         }
+    }
+
+    public void Initialize(float splitChance, Vector3 scale)
+    {
+        _splitChance = splitChance;
+        _originalScale = scale;
+        transform.localScale = scale;
     }
 }
