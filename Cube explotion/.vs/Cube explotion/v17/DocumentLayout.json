@@ -3,8 +3,20 @@
   "WorkspaceRootPath": "C:\\Unity projects\\Cube explotion\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B395ED67-9B5E-FE6F-42EF-5B28DD4CE11D}|Assembly-CSharp.csproj|c:\\unity projects\\cube explotion\\assets\\scripts\\cubeinteractionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B395ED67-9B5E-FE6F-42EF-5B28DD4CE11D}|Assembly-CSharp.csproj|C:\\Unity projects\\Cube explotion\\assets\\scripts\\cubeinteractionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B395ED67-9B5E-FE6F-42EF-5B28DD4CE11D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\cubeinteractionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B395ED67-9B5E-FE6F-42EF-5B28DD4CE11D}|Assembly-CSharp.csproj|c:\\unity projects\\cube explotion\\assets\\scripts\\cubeexploder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B395ED67-9B5E-FE6F-42EF-5B28DD4CE11D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\cubeexploder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B395ED67-9B5E-FE6F-42EF-5B28DD4CE11D}|Assembly-CSharp.csproj|c:\\unity projects\\cube explotion\\assets\\scripts\\cubespawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B395ED67-9B5E-FE6F-42EF-5B28DD4CE11D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\cubespawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B395ED67-9B5E-FE6F-42EF-5B28DD4CE11D}|Assembly-CSharp.csproj|c:\\unity projects\\cube explotion\\assets\\scripts\\inputhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B395ED67-9B5E-FE6F-42EF-5B28DD4CE11D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\inputhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B395ED67-9B5E-FE6F-42EF-5B28DD4CE11D}|Assembly-CSharp.csproj|c:\\unity projects\\cube explotion\\assets\\scripts\\cube.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -18,8 +30,60 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Cube.cs",
+              "DocumentMoniker": "C:\\Unity projects\\Cube explotion\\Assets\\Scripts\\Cube.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Cube.cs",
+              "ToolTip": "C:\\Unity projects\\Cube explotion\\Assets\\Scripts\\Cube.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Cube.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-02T12:03:26.592Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "InputHandler.cs",
+              "DocumentMoniker": "C:\\Unity projects\\Cube explotion\\Assets\\Scripts\\InputHandler.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\InputHandler.cs",
+              "ToolTip": "C:\\Unity projects\\Cube explotion\\Assets\\Scripts\\InputHandler.cs",
+              "RelativeToolTip": "Assets\\Scripts\\InputHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-02T12:03:59.929Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CubeSpawner.cs",
+              "DocumentMoniker": "C:\\Unity projects\\Cube explotion\\Assets\\Scripts\\CubeSpawner.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\CubeSpawner.cs",
+              "ToolTip": "C:\\Unity projects\\Cube explotion\\Assets\\Scripts\\CubeSpawner.cs",
+              "RelativeToolTip": "Assets\\Scripts\\CubeSpawner.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-02T12:04:15.078Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CubeExploder.cs",
+              "DocumentMoniker": "C:\\Unity projects\\Cube explotion\\Assets\\Scripts\\CubeExploder.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\CubeExploder.cs",
+              "ToolTip": "C:\\Unity projects\\Cube explotion\\Assets\\Scripts\\CubeExploder.cs",
+              "RelativeToolTip": "Assets\\Scripts\\CubeExploder.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-02T12:03:53.261Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -28,22 +92,9 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\CubeInteractionHandler.cs",
               "ToolTip": "C:\\Unity projects\\Cube explotion\\Assets\\Scripts\\CubeInteractionHandler.cs",
               "RelativeToolTip": "Assets\\Scripts\\CubeInteractionHandler.cs",
-              "ViewState": "AgIAAFAAAAAAAAAAAADwv34AAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADIAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-30T11:49:30.734Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Cube.cs",
-              "DocumentMoniker": "C:\\Unity projects\\Cube explotion\\Assets\\Scripts\\Cube.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Cube.cs",
-              "ToolTip": "C:\\Unity projects\\Cube explotion\\Assets\\Scripts\\Cube.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Cube.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-23T11:00:16.914Z",
               "EditorCaption": ""
             }
           ]

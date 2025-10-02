@@ -359,7 +359,10 @@
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.36f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.36f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/Scripts/Cube.cs"
+"Assets/Scripts/CubeExploder.cs"
 "Assets/Scripts/CubeInteractionHandler.cs"
+"Assets/Scripts/CubeSpawner.cs"
+"Assets/Scripts/InputHandler.cs"
 -langversion:9.0
 /deterministic
 /optimize+
