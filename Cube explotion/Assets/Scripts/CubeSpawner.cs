@@ -2,39 +2,15 @@ using UnityEngine;
 
 public class CubeSpawner : MonoBehaviour
 {
-    public static CubeSpawner Instance { get; private set; }
-
-    [SerializeField] private GameObject _cubePrefab;
-
-    private void Awake()
-    {
-        if (Instance != null && Instance != this)
-        {
-            Destroy(gameObject);
-            return;
-        }
-
-        Instance = this;
-    }
+    [SerializeField] private Cube _cubePrefab;
 
     public Cube SpawnCube(Vector3 position, Vector3 scale, float splitChance)
     {
-        GameObject cubeObject = Instantiate(_cubePrefab, position, Quaternion.identity);
-        cubeObject.name = "Cube";
-        cubeObject.transform.localScale = scale;
-
-        Cube cube = cubeObject.GetComponent<Cube>();
+        Cube cube = Instantiate(_cubePrefab, position, Quaternion.identity);
+        cube.name = "Cube";
         cube.Initialize(splitChance, scale);
 
-        cube.OnCubeClicked += HandleCubeClicked;
-
         return cube;
-    }
-
-    private void HandleCubeClicked(Cube cube)
-    {
-        cube.OnCubeClicked -= HandleCubeClicked;
-        Destroy(cube.gameObject);
     }
 
     public void SpawnMultipleCubes(Cube originalCube, Vector3 explosionOrigin, int count)

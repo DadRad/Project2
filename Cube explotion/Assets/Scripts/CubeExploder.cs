@@ -2,34 +2,19 @@ using UnityEngine;
 
 public class CubeExploder : MonoBehaviour
 {
-    public static CubeExploder Instance { get; private set; }
-
     [SerializeField] private float _explosionForce = 10f;
-
-    private void Awake()
-    {
-        if (Instance != null && Instance != this)
-        {
-            Destroy(gameObject);
-            return;
-        }
-
-        Instance = this;
-    }
 
     public void ApplyExplosionToCube(Cube cube, Vector3 explosionOrigin)
     {
-        Rigidbody rb = cube.GetComponent<Rigidbody>();
-
-        if (rb == null)
+        if (cube.Rigidbody == null)
         {
-            rb = cube.gameObject.AddComponent<Rigidbody>();
+            cube.gameObject.AddComponent<Rigidbody>();
         }
 
-        rb.useGravity = true;
-        rb.mass = cube.transform.localScale.x;
+        cube.Rigidbody.useGravity = true;
+        cube.Rigidbody.mass = cube.transform.localScale.x;
 
-        ApplyExplosionForce(rb, explosionOrigin);
+        ApplyExplosionForce(cube.Rigidbody, explosionOrigin);
     }
 
     private void ApplyExplosionForce(Rigidbody targetRb, Vector3 explosionOrigin)

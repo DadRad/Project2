@@ -6,15 +6,16 @@ public class Cube : MonoBehaviour
     [SerializeField] private Vector3 _originalScale;
     [SerializeField] private float _splitChance = 1f;
     private Renderer _cubeRenderer;
+    private Rigidbody _rigidbody;
 
     public Vector3 OriginalScale => _originalScale;
     public float SplitChance => _splitChance;
-
-    public System.Action<Cube> OnCubeClicked;
+    public Rigidbody Rigidbody => _rigidbody;
 
     private void Awake()
     {
         _cubeRenderer = GetComponent<Renderer>();
+        _rigidbody = GetComponent<Rigidbody>();
         _originalScale = transform.localScale;
     }
 
@@ -36,10 +37,5 @@ public class Cube : MonoBehaviour
         _splitChance = splitChance;
         _originalScale = scale;
         transform.localScale = scale;
-    }
-
-    private void OnMouseDown()
-    {
-        OnCubeClicked?.Invoke(this);
     }
 }

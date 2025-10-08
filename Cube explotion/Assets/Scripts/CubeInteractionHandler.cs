@@ -2,28 +2,26 @@ using UnityEngine;
 
 public class CubeInteractionHandler : MonoBehaviour
 {
-    public static CubeInteractionHandler Instance { get; private set; }
-
-    private void Awake()
-    {
-        if (Instance != null && Instance != this)
-        {
-            Destroy(gameObject);
-            return;
-        }
-
-        Instance = this;
-    }
+    [SerializeField] private InputReader _inputReader;
+    [SerializeField] private Raycaster _raycaster;
+    [SerializeField] private CubeExploder _cubeExploder;
+    [SerializeField] private CubeSpawner _cubeSpawner;
 
     private void Start()
     {
-        InputHandler.Instance.OnCubeClicked += HandleCubeInteraction;
+        _inputReader.OnClickPerformed += HandleClick;
+        _raycaster.OnCubeHit += HandleCubeInteraction;
     }
 
     private void OnDestroy()
     {
-        if (InputHandler.Instance != null)
-            InputHandler.Instance.OnCubeClicked -= HandleCubeInteraction;
+        _inputReader.OnClickPerformed -= HandleClick;
+        _raycaster.OnCubeHit -= HandleCubeInteraction;
+    }
+
+    private void HandleClick(Vector2 screenPosition)
+    {
+        _raycaster.PerformRaycast(screenPosition);
     }
 
     private void HandleCubeInteraction(Cube cube)
@@ -34,20 +32,18 @@ public class CubeInteractionHandler : MonoBehaviour
         if (shouldSplit && CanSplit(cube))
         {
             int newCubeCount = Random.Range(2, 7);
-            CubeSpawner.Instance.SpawnMultipleCubes(cube, interactionPoint, newCubeCount);
+            _cubeSpawner.SpawnMultipleCubes(cube, interactionPoint, newCubeCount);
+
+            Destroy(cube.gameObject);
 
             foreach (Cube newCube in FindObjectsOfType<Cube>())
             {
-                if (newCube != cube)
-                {
-                    CubeExploder.Instance.ApplyExplosionToCube(newCube, interactionPoint);
-                }
+                _cubeExploder.ApplyExplosionToCube(newCube, interactionPoint);
             }
         }
         else
         {
-
-            CubeExploder.Instance.ApplyExplosionToCube(cube, interactionPoint);
+            _cubeExploder.ApplyExplosionToCube(cube, interactionPoint);
         }
     }
 

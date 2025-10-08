@@ -60,8 +60,9 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.36f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\InputHandler.cs" />
+    <Compile Include="Assets\Scripts\InputReader.cs" />
     <Compile Include="Assets\Scripts\CubeExploder.cs" />
+    <Compile Include="Assets\Scripts\Raycaster.cs" />
     <Compile Include="Assets\Scripts\CubeInteractionHandler.cs" />
     <Compile Include="Assets\Scripts\Cube.cs" />
     <Compile Include="Assets\Scripts\CubeSpawner.cs" />

@@ -362,7 +362,8 @@
 "Assets/Scripts/CubeExploder.cs"
 "Assets/Scripts/CubeInteractionHandler.cs"
 "Assets/Scripts/CubeSpawner.cs"
-"Assets/Scripts/InputHandler.cs"
+"Assets/Scripts/InputReader.cs"
+"Assets/Scripts/Raycaster.cs"
 -langversion:9.0
 /deterministic
 /optimize+
