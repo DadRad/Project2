@@ -4,19 +4,6 @@ public class CubeExploder : MonoBehaviour
 {
     [SerializeField] private float _explosionForce = 10f;
 
-    public void ApplyExplosionToCube(Cube cube, Vector3 explosionOrigin)
-    {
-        if (cube.Rigidbody == null)
-        {
-            cube.gameObject.AddComponent<Rigidbody>();
-        }
-
-        cube.Rigidbody.useGravity = true;
-        cube.Rigidbody.mass = cube.transform.localScale.x;
-
-        ApplyExplosionForce(cube.Rigidbody, explosionOrigin);
-    }
-
     private void ApplyExplosionForce(Rigidbody targetRb, Vector3 explosionOrigin)
     {
         if (targetRb != null)
@@ -32,5 +19,18 @@ public class CubeExploder : MonoBehaviour
 
             targetRb.AddTorque(randomTorque, ForceMode.Impulse);
         }
+    }
+
+    public void ApplyExplosionToCube(Cube cube, Vector3 explosionOrigin)
+    {
+        if (cube.Rigidbody == null)
+        {
+            cube.gameObject.AddComponent<Rigidbody>();
+        }
+
+        cube.Rigidbody.useGravity = true;
+        cube.Rigidbody.mass = cube.transform.localScale.x;
+
+        ApplyExplosionForce(cube.Rigidbody, explosionOrigin);
     }
 }

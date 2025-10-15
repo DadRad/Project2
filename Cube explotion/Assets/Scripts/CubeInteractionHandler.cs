@@ -31,12 +31,15 @@ public class CubeInteractionHandler : MonoBehaviour
 
         if (shouldSplit && CanSplit(cube))
         {
-            int newCubeCount = Random.Range(2, 7);
+            int minRandomValue = 2;
+            int maxRandomValue = 7;
+            int newCubeCount = Random.Range(minRandomValue, maxRandomValue + 1);
+
             _cubeSpawner.SpawnMultipleCubes(cube, interactionPoint, newCubeCount);
 
             Destroy(cube.gameObject);
 
-            foreach (Cube newCube in FindObjectsOfType<Cube>())
+            foreach (Cube newCube in FindObjectsByType<Cube>(FindObjectsInactive.Exclude, FindObjectsSortMode.None))
             {
                 _cubeExploder.ApplyExplosionToCube(newCube, interactionPoint);
             }
@@ -49,6 +52,7 @@ public class CubeInteractionHandler : MonoBehaviour
 
     private bool CanSplit(Cube cube)
     {
-        return cube.OriginalScale.x > 0.2f;
+        float minSplitScale = 0.2f;
+        return cube.OriginalScale.x > minSplitScale;
     }
 }

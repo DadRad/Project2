@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[RequireComponent(typeof(Renderer))]
+[RequireComponent(typeof(Renderer), typeof(Rigidbody))]
 public class Cube : MonoBehaviour
 {
     [SerializeField] private Vector3 _originalScale;
