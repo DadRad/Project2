@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class CubeSpawner : MonoBehaviour
 {
@@ -13,15 +14,20 @@ public class CubeSpawner : MonoBehaviour
         return cube;
     }
 
-    public void SpawnMultipleCubes(Cube originalCube, Vector3 explosionOrigin, int count)
+    public List<Cube> SpawnMultipleCubes(Cube originalCube, Vector3 explosionOrigin, int count)
     {
+        List<Cube> newCubes = new List<Cube>();
+
         for (int i = 0; i < count; i++)
         {
             Vector3 randomOffset = Random.insideUnitSphere * 0.5f;
             Vector3 newScale = originalCube.OriginalScale * 0.5f;
             float newSplitChance = originalCube.SplitChance * 0.5f;
 
-            SpawnCube(explosionOrigin + randomOffset, newScale, newSplitChance);
+            Cube newCube = SpawnCube(explosionOrigin + randomOffset, newScale, newSplitChance);
+            newCubes.Add(newCube);
         }
+
+        return newCubes;
     }
 }

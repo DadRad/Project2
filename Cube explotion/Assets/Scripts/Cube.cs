@@ -12,6 +12,13 @@ public class Cube : MonoBehaviour
     public float SplitChance => _splitChance;
     public Rigidbody Rigidbody => _rigidbody;
 
+    public void Initialize(float splitChance, Vector3 scale)
+    {
+        _splitChance = splitChance;
+        _originalScale = scale;
+        transform.localScale = scale;
+    }
+
     private void Awake()
     {
         _cubeRenderer = GetComponent<Renderer>();
@@ -30,12 +37,5 @@ public class Cube : MonoBehaviour
         {
             _cubeRenderer.material.color = Random.ColorHSV();
         }
-    }
-
-    public void Initialize(float splitChance, Vector3 scale)
-    {
-        _splitChance = splitChance;
-        _originalScale = scale;
-        transform.localScale = scale;
     }
 }

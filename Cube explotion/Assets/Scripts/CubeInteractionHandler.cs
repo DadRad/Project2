@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class CubeInteractionHandler : MonoBehaviour
 {
@@ -29,30 +30,22 @@ public class CubeInteractionHandler : MonoBehaviour
         bool shouldSplit = Random.Range(0f, 1f) <= cube.SplitChance;
         Vector3 interactionPoint = cube.transform.position;
 
-        if (shouldSplit && CanSplit(cube))
+        if (shouldSplit)
         {
             int minRandomValue = 2;
             int maxRandomValue = 7;
             int newCubeCount = Random.Range(minRandomValue, maxRandomValue + 1);
 
-            _cubeSpawner.SpawnMultipleCubes(cube, interactionPoint, newCubeCount);
+            List<Cube> newCubes = _cubeSpawner.SpawnMultipleCubes(cube, interactionPoint, newCubeCount);
 
             Destroy(cube.gameObject);
 
-            foreach (Cube newCube in FindObjectsByType<Cube>(FindObjectsInactive.Exclude, FindObjectsSortMode.None))
+            foreach (Cube newCube in newCubes)
             {
                 _cubeExploder.ApplyExplosionToCube(newCube, interactionPoint);
             }
         }
-        else
-        {
-            _cubeExploder.ApplyExplosionToCube(cube, interactionPoint);
-        }
-    }
 
-    private bool CanSplit(Cube cube)
-    {
-        float minSplitScale = 0.2f;
-        return cube.OriginalScale.x > minSplitScale;
+        Destroy(cube.gameObject);
     }
 }
