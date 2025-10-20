@@ -519,23 +519,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: da4c0000
-      m_LastClickedID: 0
+      m_SelectedIDs: 8a5c0000
+      m_LastClickedID: 23690
       m_ExpandedIDs: 2cfbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: Input reader
+        m_OriginalName: Input reader
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: 23774
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 2}
       m_SearchString: 
@@ -927,9 +927,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0.21167655, y: -0.013198204, z: 0.0028595764, w: 0.9772466}
   m_Size:
-    m_Target: 13.28525
+    m_Target: 11.5712385
     speed: 2
-    m_Value: 12.713158
+    m_Value: 11.5712385
   m_Ortho:
     m_Target: 0
     speed: 2

@@ -2,7 +2,7 @@
 - Project name: Cube explotion
 - Unity version: Unity 2022.3.36f1
 - Active game object:
-  - Name: Cube interaction handler
+  - Name: Cube exploder
   - Tag: Untagged
   - Layer: Default
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->

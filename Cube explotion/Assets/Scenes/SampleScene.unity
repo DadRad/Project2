@@ -170,6 +170,11 @@ MonoBehaviour:
   _raycaster: {fileID: 1163025234}
   _cubeExploder: {fileID: 706890429}
   _cubeSpawner: {fileID: 1168780664}
+  _cubeLayerMask:
+    serializedVersion: 2
+    m_Bits: 8
+  _baseExplosionRadius: 3
+  _baseExplosionForce: 5
 --- !u!1 &620443585
 GameObject:
   m_ObjectHideFlags: 0
@@ -412,7 +417,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06aa9bdd69a8ef047a5e5e6e0faa1537, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _explosionForce: 0.1
+  _baseExplosionForce: 5
+  _explosionRadiusMultiplier: 2
+  _forceMultiplier: 1.5
 --- !u!1 &921683543
 GameObject:
   m_ObjectHideFlags: 0

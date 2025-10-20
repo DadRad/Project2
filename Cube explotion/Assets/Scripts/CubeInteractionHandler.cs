@@ -7,6 +7,9 @@ public class CubeInteractionHandler : MonoBehaviour
     [SerializeField] private Raycaster _raycaster;
     [SerializeField] private CubeExploder _cubeExploder;
     [SerializeField] private CubeSpawner _cubeSpawner;
+    [SerializeField] private LayerMask _cubeLayerMask;
+    [SerializeField] private float _baseExplosionRadius = 3f;
+    [SerializeField] private float _baseExplosionForce = 15f;
 
     private void Start()
     {
@@ -44,6 +47,16 @@ public class CubeInteractionHandler : MonoBehaviour
             {
                 _cubeExploder.ApplyExplosionToCube(newCube, interactionPoint);
             }
+        }
+        else
+        {
+            float cubeSize = cube.OriginalScale.x;
+            float explosionRadius = _baseExplosionRadius * (1f / cubeSize);
+            float explosionForce = _baseExplosionForce * (1f / cubeSize);
+
+            _cubeExploder.CreateExplosion(interactionPoint, explosionRadius, explosionForce, _cubeLayerMask);
+
+            Destroy(cube.gameObject);
         }
 
         Destroy(cube.gameObject);
